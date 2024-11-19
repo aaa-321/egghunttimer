@@ -140,7 +140,7 @@ function summationCalculation() {
     let m = Number(document.getElementById("time14").value);
     let n = Number(document.getElementById("time15").value);
   	let totalTimeInMS = a + b + c + d + e + f + g + h + i + j + k + l + m + n;
-
+	 document.getElementById("timeTotalMS").value = totalTimeInMS;
     let totalTimeInSeconds = Math.floor(totalTimeInMS / 1000);
     let totalTimeInMinutes = Math.floor(totalTimeInSeconds / 60);
     let totalTimeInHours = Math.floor(totalTimeInMinutes / 60);
@@ -262,11 +262,11 @@ computeClicks = 1;
     </p>
     <p>
       <label for="startobj">Starting frame: </label>
-      <input type="text" id="startobj" style='width:100%' size="100" onchange='parseForTime(event)' />
+      <input type="text" id="startobj" style='width:100%' size="80" onchange='parseForTime(event)' />
     </p>
     <p>
       <label for="endobj">Ending frame: </label>
-      <input type="text" id="endobj" style='width:100%' size="100" onchange='parseForTime(event)' />
+      <input type="text" id="endobj" style='width:100%' size="80" onchange='parseForTime(event)' />
     </p>
     <h3 id="video-time">Video Time</h3>
     <button id="computeButton" onclick="compute()">Compute time</button>&nbsp;<input type="text" id="time" readonly
@@ -311,6 +311,10 @@ computeClicks = 1;
   	<p>
 		<label for="time">Total Time: </label>
 		<input type="text" id="timeTotal" class="own_line" readonly>
+	</p>
+	  	<p>
+		<label for="time">Total Time (In Milliseconds): </label>
+		<input type="text" id="timeTotalMS" class="own_line" readonly>
 	</p>
     <br />
     <br />
