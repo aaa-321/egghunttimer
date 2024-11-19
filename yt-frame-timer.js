@@ -58,6 +58,12 @@ function copyModMessage() {
 	alert(`The mod message has been copied to clipboard! Please paste it into the comment of the run you are verifying.`);
 }
 
+function summationCalculation() {
+	var x = Number(document.getElementById("time2").value);
+	var y = Number(document.getElementById("time3").value);
+	document.getElementById("timeTotal").value = x + y;
+}
+
 const validateFPS = (event) => {
     // If framerate is invalid, show an error message and disable start and end frame fields
     if (event.target.value === '' || parseInt(event.target.value) <= 0 || isNaN(parseInt(event.target.value))) {
