@@ -262,17 +262,18 @@ computeClicks = 1;
     </p>
     <p>
       <label for="startobj">Starting frame: </label>
-      <input type="text" id="startobj" style='width:100%' value="7.27" onchange='parseForTime(event)' />
+      <input type="text" id="startobj" style='width:100%' onchange='parseForTime(event)' />
     </p>
     <p>
       <label for="endobj">Ending frame: </label>
-      <input type="text" id="endobj" style='width:100%' value="69.420" onchange='parseForTime(event)' />
+      <input type="text" id="endobj" style='width:100%' onchange='parseForTime(event)' />
     </p>
     <h3 id="video-time">Video Time</h3>
     <button id="computeButton" onclick="compute()">Compute time</button>&nbsp;<input type="text" id="time" readonly
       size="20" />
   <br />
   <h3> Action History (In Milliseconds)</h3>
+  <p>All computed times will go here. Summing them up with the button will add the times you computed and deliver them to you in proper format.</p>
   <input type="text" id="time2" size="20" />
     <br />
   <input type="text" id="time3" size="20" />
@@ -300,6 +301,7 @@ computeClicks = 1;
   <input type="text" id="time14" size="20" />
     <br />
   <input type="text" id="time15" size="20" />
+    <br />
     <br />
       <button id="summationCalculationButton" onclick="summationCalculation()" >Sum 'em up!</button>
       <button id="clearActionsButton" onclick="clearActions()" >Clear</button>
